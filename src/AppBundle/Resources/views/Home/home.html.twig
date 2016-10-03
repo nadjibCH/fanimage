@@ -1,0 +1,148 @@
+{% extends "::base.html.twig" %}
+
+
+{% block body %}
+
+    <div class="container-viewport" style="background-color: #e8e8e8">
+
+
+        <div class="container" style=" color: white">
+
+{#
+            <!-- les villes -->
+            <div class="container-fluid col-xs-12 col-sm-12 col-md-12" >
+                <div class=" col-xs-12 col-sm-12 col-md-12" style="margin-top: 32px">
+                    <div class=" col-xs-12 col-sm-12 col-md-12 "  style="background-color: #1f2326; padding-top: 4%;  ">
+                        <div class="row">
+                            <div class=" ville-size col-xs-12 col-sm-4 col-md-4 " style="margin-bottom: 2%" >
+                                <a href="ville/Marseille" >
+                                    <img src="{{ asset('bundles/framework/images/marseille.png') }}" alt="" style="background-repeat: no-repeat;width: 100%; height: 100%;">
+                                    <div class="row" style="bottom: 49px; left: 15px; right: 15px; position:absolute;">
+                                        <div class=" col-xs-12 col-sm-12 col-md-12 ">
+                                            <div  style=" position: absolute;background-color:#1f2326;left: 15px;right: 15px;height:50px; opacity: 0.6; ">
+                                                <div style=" color: #fff; position: absolute;left: 10px;right: 10px;height:50px; text-align: center;">
+                                                    <h4>MARSEILLE</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class=" ville-size col-xs-12 col-sm-4 col-md-4 " style="margin-bottom: 2%" >
+                                <a href="ville/Avignon" >
+                                    <img src="{{ asset('bundles/framework/images/avignon.png') }}" alt="" style="background-repeat: no-repeat;width: 100%;height: 100%;">
+
+                                    <div class="row" style="bottom: 49px; left: 15px; right: 15px; position:absolute;">
+                                        <div class=" col-xs-12 col-sm-12 col-md-12 ">
+                                            <div  style=" position: absolute;background-color:#1f2326;left: 15px;right: 15px;height:50px; opacity: 0.6; ">
+                                                <div style=" color: #fff; position: absolute;left: 10px;right: 10px;height:50px; text-align: center;">
+                                                    <h4>AVIGNON</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" ville-size col-xs-12 col-sm-4 col-md-4" style="margin-bottom: 2%">
+                                <a href="ville/Aix-en-Provence" >
+                                    <img src="{{ asset('bundles/framework/images/aix.png') }}" alt="" style="background-repeat: no-repeat;width: 100%;height: 100%;">
+
+                                    <div class="row" style="bottom: 49px; left: 15px; right: 15px; position:absolute;">
+                                        <div class=" col-xs-12 col-sm-12 col-md-12 ">
+                                            <div  style=" position: absolute;background-color:#1f2326;left: 15px;right: 15px;height:50px; opacity: 0.6; ">
+                                                <div style=" color: #fff; position: absolute;left: 10px;right: 10px;height:50px; text-align: center;">
+                                                    <h4>AIX-EN-PROVENCE</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <div class=" text-center col-xs-12 col-sm-12 col-md-12 " style="padding: 4%">
+                                    <a href="#villes" class="btn btn-primary btn-lg" style="background-color: #36393c; border-color: #36393c; color: #ffff2b; margin: 2px; font-size: 95%">VOIR PLUS DE VILLES !</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+#}
+
+
+            <div   class="  col-xs-12 col-sm-12 col-md-12 " >
+                <div   class="  col-xs-12 col-sm-4 col-md-4 " >
+                    {% for i in 1..5 %}
+                        <div class="row" style="background-color: #9fa5aa;  "  >
+                            <a href="#" >
+                                <img src="{{ asset('bundles/framework/images/photo'~i~'.jpg') }}" alt="" style="background-repeat: no-repeat;width: 100%;">
+                                {#~ville[i].shoppic[0]#}
+                                <div class="row" style="bottom: 80px; left: 15px; right: 15px; position:absolute;">
+                                    <div class=" col-xs-12 col-sm-12 col-md-12 ">
+                                        <div  style=" position: absolute;background-color:#1f2326;left: 15px;right: 15px;height:82px; opacity: 0.8; z-index: 1">
+                                            <div class="center-block" style=" color: #fff; position: absolute; text-align: left;padding: 2% ">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div   class="  col-xs-12 col-sm-4 col-md-4 " >
+                    {% for i in 5..10 %}
+                        <div class="row" style="background-color: #9fa5aa;  "  >
+                            <a href="#" >
+                                <img src="{{ asset('bundles/framework/images/photo'~i~'.jpg') }}" alt="" style="background-repeat: no-repeat;width: 100%;">
+                                {#~ville[i].shoppic[0]#}
+                                <div class="row" style="bottom: 80px; left: 15px; right: 15px; position:absolute;">
+                                    <div class=" col-xs-12 col-sm-12 col-md-12 ">
+                                        <div  style=" position: absolute;background-color:#1f2326;left: 15px;right: 15px;height:82px; opacity: 0.8">
+                                            <div class="center-block" style=" color: #fff; position: absolute; text-align: left;padding: 2% ">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div   class="  col-xs-12 col-sm-4 col-md-4 " >
+                    {% for i in 1..10 %}
+                        <div class="row" style="background-color: #9fa5aa;  "  >
+                            <a href="#" >
+                                <img src="{{ asset('bundles/framework/images/photo'~i~'.jpg') }}" alt="" style="background-repeat: no-repeat;width: 100%;">
+                                {#~ville[i].shoppic[0]#}
+                                <div class="row" style="bottom: 80px; left: 15px; right: 15px; position:absolute;">
+                                    <div class=" col-xs-12 col-sm-12 col-md-12 ">
+                                        <div  style=" position: absolute;background-color:#1f2326;left: 15px;right: 15px;height:82px; opacity: 0.8">
+                                            <div class="center-block" style=" color: #fff; position: absolute; text-align: left;padding: 2% ">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+
+
+
+
+
+        </div><!-- /.container -->
+
+
+
+
+
+    </div><!-- /.container viewport-->
+
+{% endblock %}
+
