@@ -37,7 +37,7 @@ class PhpFileLoaderTest extends \PHPUnit_Framework_TestCase
         $this->assertContainsOnly('Symfony\Component\Routing\Route', $routes);
 
         foreach ($routes as $route) {
-            $this->assertSame('/blog/{slug}', $route->getPath());
+            $this->assertSame('/Blog/{slug}', $route->getPath());
             $this->assertSame('MyBlogBundle:Blog:show', $route->getDefault('_controller'));
             $this->assertSame('{locale}.example.com', $route->getHost());
             $this->assertSame('RouteCompiler', $route->getOption('compiler_class'));
@@ -56,7 +56,7 @@ class PhpFileLoaderTest extends \PHPUnit_Framework_TestCase
         $this->assertContainsOnly('Symfony\Component\Routing\Route', $routes);
 
         foreach ($routes as $route) {
-            $this->assertSame('/prefix/blog/{slug}', $route->getPath());
+            $this->assertSame('/prefix/Blog/{slug}', $route->getPath());
             $this->assertSame('MyBlogBundle:Blog:show', $route->getDefault('_controller'));
             $this->assertSame('{locale}.example.com', $route->getHost());
             $this->assertSame('RouteCompiler', $route->getOption('compiler_class'));

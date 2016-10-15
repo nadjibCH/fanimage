@@ -69,10 +69,10 @@ class JsonResponseTest extends \PHPUnit_Framework_TestCase
 
     public function testConstructorWithCustomContentType()
     {
-        $headers = array('Content-Type' => 'application/vnd.acme.blog-v1+json');
+        $headers = array('Content-Type' => 'application/vnd.acme.Blog-v1+json');
 
         $response = new JsonResponse(array(), 200, $headers);
-        $this->assertSame('application/vnd.acme.blog-v1+json', $response->headers->get('Content-Type'));
+        $this->assertSame('application/vnd.acme.Blog-v1+json', $response->headers->get('Content-Type'));
     }
 
     public function testSetJson()
@@ -158,10 +158,10 @@ class JsonResponseTest extends \PHPUnit_Framework_TestCase
 
     public function testStaticCreateWithCustomContentType()
     {
-        $headers = array('Content-Type' => 'application/vnd.acme.blog-v1+json');
+        $headers = array('Content-Type' => 'application/vnd.acme.Blog-v1+json');
 
         $response = JsonResponse::create(array(), 200, $headers);
-        $this->assertSame('application/vnd.acme.blog-v1+json', $response->headers->get('Content-Type'));
+        $this->assertSame('application/vnd.acme.Blog-v1+json', $response->headers->get('Content-Type'));
     }
 
     public function testSetCallback()

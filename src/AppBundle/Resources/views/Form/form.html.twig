@@ -1,0 +1,28 @@
+{% extends "::base.html.twig" %}
+
+
+{% block body %}
+
+    <div class="container-viewport" style="background-color: palevioletred">
+
+        <div class="container" style=" color: black">
+
+            <div class="text-center" style="background-color: #00abbb; color: black; ">
+                {{ form_start(form) }}
+                {{ form_label(form) }}
+                {{ form_errors(form) }}
+
+                {{ form_end(form) }}
+
+                {% if nomimage is not null %}
+                    l'image : {{ nomimage }} est bien enregistrée
+                    </div>
+                        <img src="{{ asset('bundles/framework/images/'~nomimage) }}" style="background-repeat: no-repeat;width: 100%;" />
+                    </div><!-- /.container -->
+                {% endif %}
+
+
+    </div><!-- /.container viewport-->
+
+{% endblock %}
+

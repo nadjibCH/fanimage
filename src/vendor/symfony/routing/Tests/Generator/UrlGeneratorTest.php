@@ -492,7 +492,7 @@ class UrlGeneratorTest extends \PHPUnit_Framework_TestCase
         $routes->add('article', new Route('/{author}/{article}/'));
         $routes->add('comments', new Route('/{author}/{article}/comments'));
         $routes->add('host', new Route('/{article}', array(), array(), array(), '{author}.example.com'));
-        $routes->add('scheme', new Route('/{author}/blog', array(), array(), array(), '', array('https')));
+        $routes->add('scheme', new Route('/{author}/Blog', array(), array(), array(), '', array('https')));
         $routes->add('unrelated', new Route('/about'));
 
         $generator = $this->getGenerator($routes, array('host' => 'example.com', 'pathInfo' => '/fabien/symfony-is-great/'));
@@ -512,7 +512,7 @@ class UrlGeneratorTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('//bernhard.example.com/app.php/forms-are-great', $generator->generate('host',
             array('author' => 'bernhard', 'article' => 'forms-are-great'), UrlGeneratorInterface::RELATIVE_PATH)
         );
-        $this->assertSame('https://example.com/app.php/bernhard/blog', $generator->generate('scheme',
+        $this->assertSame('https://example.com/app.php/bernhard/Blog', $generator->generate('scheme',
                 array('author' => 'bernhard'), UrlGeneratorInterface::RELATIVE_PATH)
         );
         $this->assertSame('../../about', $generator->generate('unrelated',

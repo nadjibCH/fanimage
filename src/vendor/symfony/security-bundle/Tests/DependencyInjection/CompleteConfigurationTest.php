@@ -153,14 +153,14 @@ abstract class CompleteConfigurationTest extends \PHPUnit_Framework_TestCase
                 $this->assertEquals(array('ROLE_USER'), $attributes);
                 $this->assertEquals('https', $channel);
                 $this->assertEquals(
-                    array('/blog/524', null, array('GET', 'POST')),
+                    array('/Blog/524', null, array('GET', 'POST')),
                     $requestMatcher->getArguments()
                 );
             } elseif (2 === $i) {
                 $this->assertEquals(array('IS_AUTHENTICATED_ANONYMOUSLY'), $attributes);
                 $this->assertNull($channel);
                 $this->assertEquals(
-                    array('/blog/.*'),
+                    array('/Blog/.*'),
                     $requestMatcher->getArguments()
                 );
             } elseif (3 === $i) {

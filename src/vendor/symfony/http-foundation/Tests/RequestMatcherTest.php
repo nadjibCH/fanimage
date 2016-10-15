@@ -106,7 +106,7 @@ class RequestMatcherTest extends \PHPUnit_Framework_TestCase
         $matcher->matchPath('^/admin/.*$');
         $this->assertTrue($matcher->matches($request));
 
-        $matcher->matchMethod('/blog/.*');
+        $matcher->matchMethod('/Blog/.*');
         $this->assertFalse($matcher->matches($request));
     }
 
